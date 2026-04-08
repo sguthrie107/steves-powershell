@@ -10,38 +10,34 @@
       "segments": [
         {
           "type": "os",
-          "style": "diamond",
-          "leading_diamond": "\uE0B6",
-          "trailing_diamond": "\uE0B0",
+          "style": "plain",
           "foreground": "#A58C62",
           "background": "#005DFB",
-          "template": " \uE62A "
+          "template": " PS "
         },
         {
           "type": "path",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
+          "style": "plain",
           "foreground": "#CDD0CB",
           "background": "#510E6F",
-          "template": " \uF07B {{ .Path }} ",
+          "template": " {{ .Path }} ",
           "properties": {
             "style": "agnoster",
             "max_depth": 4,
-            "folder_separator_icon": " \uE0B1 ",
-            "home_icon": "\uF015",
+            "folder_separator_icon": " > ",
+            "home_icon": "~",
             "mapped_locations_enabled": true
           }
         },
         {
           "type": "git",
-          "style": "powerline",
-          "powerline_symbol": "\uE0B0",
+          "style": "plain",
           "foreground": "#A58C62",
           "background": "#005DFB",
           "background_templates": [
             "{{ if or (.Working.Changed) (.Staging.Changed) }}#2C0545{{ end }}"
           ],
-          "template": " \uE0A0 {{ .HEAD }}{{ if .Working.Changed }} \u2717{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \u2713{{ .Staging.String }}{{ end }}{{ if gt .Ahead 0 }} \u21E1{{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} \u21E3{{ .Behind }}{{ end }} ",
+          "template": " {{ .HEAD }}{{ if .Working.Changed }} \u2717{{ .Working.String }}{{ end }}{{ if .Staging.Changed }} \u2713{{ .Staging.String }}{{ end }}{{ if gt .Ahead 0 }} \u21E1{{ .Ahead }}{{ end }}{{ if gt .Behind 0 }} \u21E3{{ .Behind }}{{ end }} ",
           "properties": {
             "branch_icon": "",
             "fetch_status": true,
@@ -58,7 +54,7 @@
           "style": "plain",
           "foreground": "#CDD0CB",
           "background": "transparent",
-          "template": "\uF252 {{ .FormattedMs }} ",
+          "template": "{{ .FormattedMs }} ",
           "properties": {
             "threshold": 5000,
             "style": "austin"
@@ -66,12 +62,10 @@
         },
         {
           "type": "time",
-          "style": "diamond",
-          "leading_diamond": "\uE0B6",
-          "trailing_diamond": "\uE0B4",
+          "style": "plain",
           "foreground": "#A58C62",
           "background": "#510E6F",
-          "template": " \uF017 {{ .CurrentDate | date \"15:04\" }} "
+          "template": " {{ .CurrentDate | date \"15:04\" }} "
         }
       ]
     },
