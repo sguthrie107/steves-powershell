@@ -64,8 +64,8 @@
           "type": "time",
           "style": "plain",
           "foreground": "#FFEC2F",
-          "background": "#000E7A",
-          "template": " {{ .CurrentDate | date \"15:04\" }} "
+          "background": "transparent",
+          "template": "{{ .CurrentDate | date \"15:04\" }}"
         }
       ]
     },
